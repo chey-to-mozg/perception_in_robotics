@@ -1,0 +1,8 @@
+python run.py --animate -s
+python run.py --animate -s -f ekf -n 100 -m EKF.avi  -i evaluation-input.npy
+python run.py --animate -f pf -n 100 --show-particles -m PF_local.avi -i evaluation-input.npy
+python run.py --animate -s -f pf -n 100 --num-particles 500  --global-localization 
+python run.py --animate -f pf -n 100 --num-particles 1000 --show-particles --plot-pause-len 0.01 -b 1
+python run.py --animate -f pf -n 100 --show-par -m video_PF.avi -i evaluation-input.npy -b 25 --num-particles 100 -a 0.05 0.001 0.05 0.01 -o output_pf
+python run.py --animate -f pf -n 100 -s -m PF_local.avi -i evaluation-input.npy -b 50 --num-particles 500 -a 0.05 0.001 0.05 0.01
+python run.py --animate -f pf -n 200 --show-part -b 20 --num-particles 100 -a 0.01 0.005 0.05 0.01 -o for_plots
